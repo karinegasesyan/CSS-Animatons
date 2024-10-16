@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>error 404</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .flex{
+                display: flex;
+            }
+            .flex__aln-center{
+                align-items: center;
+            }
+            .flex__jfy-center{
+                justify-content: center;
+            }
+            .error_404{
+                background: #fff;
+                color: #333;
+                width: 100%;
+                height: 100vh;
+            }
+            .box {
+                width: 800px;
+                margin: 0 auto;
+            }
+            .box h1{
+                text-align: center;
+                font-size: 64px;
+                margin-bottom: 32px;
+                font-weight: normal;
+            }
+            .box-container {
+                width: 164px;
+                margin: 0 auto;
+                margin-top: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .plug-case {
+                position: relative;
+                display: inline-block;
+                height: 30px;
+                width: 20px;
+                top: 0;
+                background-color: #333535;
+                transform: translateX(-32px);
+                border-radius: 6px 2px 2px 6px;
+                animation: move-right 3.5s infinite forwards;
+            }
+
+            @keyframes move-right {
+                20% {
+                    transform: translateX(-9px);
+                }
+                70% {
+                    transform: translateX(-9px);
+                }
+            }
+            .plug-wire {
+            position: relative;
+            height: 4px;
+            width: 16px;
+            background-color: #474947;
+            top: 0;
+            left: -32px;
+            border-radius: 1px;
+            transform-origin:  left;
+            animation: extend-wire 3.5s infinite forwards;
+            }
+
+            @keyframes extend-wire {
+            30% {
+                transform: scaleX(3);
+            }
+            70% {
+                transform: scaleX(3);
+            }
+            }
+            .pin {
+                position: relative;
+                height: 6px;
+                width: 10px;
+                background-color: #929392;
+                border-radius: 0 3px 3px 0;
+            }
+
+            .pin-1 {
+            transform: translate(20px, 5px);
+            }
+
+            .pin-2 {
+            transform: translate(20px, 13px);
+            }
+
+            .socket {
+                position: relative;
+                display: inline-block;
+                height: 32px;
+                width: 32px;
+                padding: 8px 4px 4px 6px;
+                background-color: #474947;
+                text-align: center;
+                border-radius: 2px;
+                z-index: 1;
+                margin-left: 2px;
+            }
+
+            i {
+            color: #bc272c;
+            animation: light-up 3.5s infinite forwards;
+            }
+
+            @keyframes light-up {
+            20% {
+                color: #2e302e;
+                text-shadow: none;
+            }
+            21% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            23% {
+                color: #2e302e;
+                text-shadow: none;
+            }
+            24% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            25% {
+                color: #2e302e;
+                text-shadow: none;
+            }
+            26% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            70% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="error_404 flex flex__aln-center flex__jfy-center">
+            <div class="box">
+                <h1>Error 404</h1>
+                <div class="box-container">
+                    <div class="plug-wire"></div>
+                    <div class="plug-case">
+                    <div class="pin pin-1"></div>
+                    <div class="pin pin-2"></div>
+                </div>
+                <div class="socket"><i class="fa fa-bolt fa-1x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>  
+</html>

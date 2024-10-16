@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>spinner animation</title>
+        <style>
+            body{
+                background: pink;
+            }
+            .spinner-anime{
+                position: relative;
+                width: 400px;
+                overflow: hidden;
+                margin: 32px auto;
+                display: flex;
+            }
+            .spinner-anime .img-main{
+                width: 100%;
+            }
+            .spinner_1{
+                width: 120px;
+                position: absolute;
+                left: 132px;
+                top: 60px;
+                z-index: 3;
+            }
+            .spinner_1 img{
+                width: 100%;
+                animation: rotate 3s linear infinite;
+            }
+            .spinner_2{
+                width: 90px;
+                position: absolute;
+                left: 81px;
+                top: 115px;
+                overflow: hidden;
+            }
+            .spinner_2 img{
+                width: 100%;
+                animation: rotate 3s linear infinite;
+                border-radius: 50%;
+            }
+            .spinner_3{
+                width: 90px;
+                position: absolute;
+                right: 97px;
+                top: 115px;
+                overflow: hidden;
+            }
+            .spinner_3 img{
+                width: 100%;
+                animation: rotate 3s linear infinite;
+                border-radius: 50%;
+            }
+            .spinner_cloud{
+                width: 44px;
+                position: absolute;
+                top: 32px;
+                left: 50%;
+            }
+            .spinner_cloud img{
+                width: 100%;
+                animation: moveCloudRight 4s linear infinite;
+            }
+            .spinner_cloud_1{
+                width: 24px;
+                position: absolute;
+                top: 94px;
+                left: 25%;
+            }
+            .spinner_cloud_1 img{
+                width: 100%;
+                animation: moveCloudLeft 6s linear infinite;
+            }
+            .spinner_cloud_2{
+                width: 24px;
+                position: absolute;
+                top: 124px;
+                right: 20%;
+            }
+            .spinner_cloud_2 img{
+                width: 100%;
+                animation: moveCloudLeft 8s linear infinite;
+            }
+
+
+            .illustration-anime{
+                width: 55%;
+                margin: 0 auto;
+                display: flex;
+                position: relative;
+            }
+            .illustration-anime .img-main{
+                width: 100%;
+            }
+            .anime_1{
+                position: absolute;
+                left: 272px;
+                top: 40px;
+                width: 44px;
+            }
+            .anime_1 img{
+                width: 100%;
+                animation: shift 4s linear infinite;
+            }
+            .anime_2{
+                position: absolute;
+                left: 160px;
+                top: 32px;
+            }
+            .anime_2 img{
+                animation: shift 2.5s linear infinite;
+            }
+            .anime_3{
+                position: absolute;
+                right: 0;
+                top: 64px;
+                width: 200px;
+            }
+            .anime_3 img{
+                width: 100%;
+                animation: shift 3s linear infinite;
+            }
+            .anime_spinner_1{
+                width: 120px;
+                position: absolute;
+                left: 366px;
+                top: 115px;
+                z-index: 3;
+            }
+            .anime_spinner_1 img{
+                width: 100%;
+                animation: rotate 3s linear infinite;
+            }
+            .anime_spinner_2 {
+                width: 100px;
+                position: absolute;
+                left: 428px;
+                top: 168px;
+                overflow: hidden;
+            }
+            .anime_spinner_2 img{
+                width: 100%;
+                border-radius: 50%;
+                animation: rotate 3s linear infinite;
+            }
+            .cloud-anime{
+                top: 90px;
+                position: absolute;
+                right: 108px;
+            }
+            .cloud-anime img{
+                animation: moveCloudRight 5s linear infinite;
+            }
+            .cloud-anime_1{
+                top: 254px;
+                position: absolute;
+                left: 44%;
+                transform: translateY(-44%);
+                width: 40px;
+            }
+            .cloud-anime_1 img{
+                width: 100%;
+                animation: moveCloudLeft 8s linear infinite;
+            }
+            .cloud-anime_2{
+                position: absolute;
+                top: 80px;
+                left: 55%;
+                transform: translateX(-55%);
+            }
+            .cloud-anime_2 img{
+                animation: moveCloudRight 8s linear infinite;
+            }
+            .cloud-anime_3{
+                position: absolute;
+                top: 170px;
+                right: 22%;
+                transform: translateX(-22%);
+            }
+            .cloud-anime_3 img{
+                animation: moveCloudLeft 3s linear infinite;
+            }
+            .cloud-anime_4{
+                position: absolute;
+                top: 152px;
+                right: 32%;
+                transform: translateX(-32%);
+            }
+            .cloud-anime_4 img{
+                animation: moveCloudRight 5s linear infinite;
+            }
+            .water-anime{
+                background: red;
+                position: absolute;
+                bottom: 0;
+                right: 15%;
+                width: 100%;
+            }
+            @keyframes rotate {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            @keyframes shift {
+                0% {
+                    transform: translate(0px, 0);
+                    opacity: 1;
+                }
+                80% {
+                    opacity: 0;
+                }
+                
+                100% { 
+                    transform: translate(0px, -16px);
+                    opacity: 0;
+                }
+            }
+            @keyframes moveCloudRight {
+                0% {
+                    transform: translateX(0px);
+                }
+                25% {
+                    transform: translateX(8px);
+                }
+                50%{
+                    transform: translateX(16px);
+                }
+                75%{
+                    transform: translateX(24px);
+                }
+                100%{
+                    transform: translateX(0px);
+                }
+            }
+            @keyframes moveCloudLeft {
+                0% {
+                    transform: translateX(24px);
+                }
+                25% {
+                    transform: translateX(16px);
+                }
+                50%{
+                    transform: translateX(8px);
+                }
+                75%{
+                    transform: translateX(0px);
+                }
+                100%{
+                    transform: translateX(24px);
+                }
+            }
+
+            .box {
+            background-color: #fff;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 32px;
+            }
+
+            h1 {
+            padding-top: -35px;
+            color: #2e302e;
+            margin-bottom: 0px;
+            animation: light-up 3.5s infinite forwards;
+            }
+
+            .plug-case {
+            position: relative;
+            display: inline-block;
+            height: 30px;
+            width: 20px;
+            top: -17px;
+            background-color: #333535;
+            transform: translateX(-35px);
+            border-radius: 5px 2px 2px 5px;
+            animation: move-right 3.5s infinite forwards;
+            }
+
+            @keyframes move-right {
+            20% {
+                transform: translateX(-9px);
+            }
+            70% {
+                transform: translateX(-9px);
+            }
+            }
+            .plug-wire {
+            position: relative;
+            height: 4px;
+            width: 12px;
+            background-color: #474947;
+            top: -1px;
+            left: 5px;
+            border-radius: 1px;
+            transform-origin: left;
+            animation: extend-wire 3.5s infinite forwards;
+            }
+
+            @keyframes extend-wire {
+            30% {
+                transform: scaleX(3);
+            }
+            70% {
+                transform: scaleX(3);
+            }
+            }
+            .pin {
+            position: relative;
+            height: 6px;
+            width: 10px;
+            background-color: #929392;
+            border-radius: 0 3px 3px 0;
+            }
+
+            .pin-1 {
+            transform: translate(20px, 5px);
+            }
+
+            .pin-2 {
+            transform: translate(20px, 13px);
+            }
+
+            .socket {
+            position: relative;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            padding: 7px 5px 4px 5px;
+            background-color: #474947;
+            text-align: center;
+            transform: translate(-13px, -29px);
+            border-radius: 2px;
+            z-index: 1;
+            }
+
+            i {
+            color: #bc272c;
+            animation: light-up 3.5s infinite forwards;
+            }
+
+            @keyframes light-up {
+            20% {
+                color: #2e302e;
+                text-shadow: none;
+            }
+            21% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            23% {
+                color: #2e302e;
+                text-shadow: none;
+            }
+            24% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            25% {
+                color: #2e302e;
+                text-shadow: none;
+            }
+            26% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            70% {
+                color: #67fc67;
+                text-shadow: 0px 0px 20px #67fc67;
+            }
+            }
+            .socket-wire {
+            position: relative;
+            height: 3px;
+            width: 10px;
+            background-color: #2e302e;
+            transform: rotate(90deg) translate(-31px, -8px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="spinner-anime">
+            <img class="img-main" src="images/power_turbine.svg"/>
+            <div class="spinner_1">
+                <img src="images/spinner_1.png"/>
+            </div>
+            <div class="spinner_2">
+                <img src="images/spinner_2.png"/>
+            </div>
+            <div class="spinner_3">
+                <img src="images/spinner_2.png"/>
+            </div>
+            <div class="spinner_cloud">
+                <img src="images/cloud_2.png"/>
+            </div>
+            <div class="spinner_cloud_1">
+                <img src="images/cloud_1.png"/>
+            </div>
+            <div class="spinner_cloud_2">
+                <img src="images/cloud_4.png"/>
+            </div>
+        </div>
+        
+        <div class="illustration-anime">
+            <img class="img-main" src="images/illustraton_1.svg"/>
+            <div class="anime_1">
+                <img src="images/tower_smoke.svg"/>
+            </div>
+            <div class="anime_2">
+                <img src="images/smoke_1.svg"/>
+            </div>
+            <div class="anime_spinner_1">
+                <img src="images/spinner_1.png"/>
+            </div>
+            <div class="anime_spinner_2">
+                <img src="images/spinner_3.png"/>
+            </div>
+            <div class="anime_3">
+                <img src="images/smoke_2.svg"/>
+            </div>
+            <div class="cloud-anime">
+                <img src="images/cloud.png"/>
+            </div>
+            <div class="cloud-anime_1">
+                <img src="images/cloud_1.png"/>
+            </div>
+            <div class="cloud-anime_2">
+                <img src="images/cloud_2.png"/>
+            </div>
+            <div class="cloud-anime_3">
+                <img src="images/cloud_3.png"/>
+            </div>
+            <div class="cloud-anime_4">
+                <img src="images/cloud_4.png"/>
+            </div>
+        </div>
+        <div class="box">
+            <div class="container">
+              <!-- <h1>LOADING</h1> -->
+              <div class="container">
+                <div class="plug-wire"></div>
+                <div class="plug-case">
+                  <div class="pin pin-1"></div>
+                  <div class="pin pin-2"></div>
+                </div>
+              <div class="socket"><i class="fa fa-bolt fa-1x"></i>
+                <div class="socket-wire"></div>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+
+          
+    </body>
+</html>
